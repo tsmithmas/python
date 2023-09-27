@@ -28,6 +28,24 @@
 # else:
 #     print('Пам парам')
 
+def is_rhythm(words, vowels):
+    words = words.split()
+    sum_of_vowels = []
+    for word in words:
+        syllables = 0
+        for i in word:
+            if i in vowels:
+                syllables += 1
+        sum_of_vowels.append(syllables)
+    return len(sum_of_vowels) == sum_of_vowels.count(sum_of_vowels[0])
+
+poem = "пара-ра-рам рам-пам-папам па-ра-па-да"
+vowel_letters = 'цшогшграш'
+if is_rhythm(poem, vowel_letters):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
+
 
 
 
@@ -51,10 +69,10 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-def print_operation_table(operation, num_rows=6, num_columns=6):
-    a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
-    for i in a:
-        print(*[f"{x:>3}" for x in i])
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+#     a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
+#     for i in a:
+#         print(*[f"{x:>3}" for x in i])
 
 
-print_operation_table(lambda x, y: x * y)
+# print_operation_table(lambda x, y: x * y)
