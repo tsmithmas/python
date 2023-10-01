@@ -91,7 +91,7 @@ def interface():
         cmd = input("введите действие: ")
         while cmd not in ('1', '2', '3', '4', '5', '6'):
             print("Некорректный ввод")
-            cmd = input("Введите действие: ")
+            cmd = input("Введите действие: \n")
         match cmd: 
             case '1': 
                 enter_data()
